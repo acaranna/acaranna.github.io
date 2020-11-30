@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="images/jamjar.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <title>A Berry Jam Recipe</title>
+  </head>
+
+  <body>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+
+    <header>
+      <div class="title">
+        <img src="images/jamjar.png" alt="jam jar logo" style="float:left;width:40px;height:40px;">
+        <span style="display: inline-block">
+          <h1>It's Easy to Jam</h1>
+        </span>
+      </div>
+      <nav>
+          <ul class="nav_links">
+          <li class="nav_item"><a href="index.html">Home</a></li>
+          <li class="nav_item"><a href="jamahistory.html">What's in a Jam?</a></li>
+          <li class="nav_item"><a href="jamgallery.html">A Few Jam Flavors</a></li>
+          <li class="nav_item active"><a href="jamrecipe.html">&#127818 Recipe</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main class="about" id="skip" tabindex="0">
+      <div class="recipe_intro">
+        <h1>A Berry Jam Recipe</h1>
+        <h2>A Super Easy Way to Make Berry Jam</h2>
+        <p>This recipe works for raspberries, blueberries, blackberries, cranberries...anything ending in a "berry".</p>
+      </div>
+
+      <div>
+        <br>
+        <h2>You Will Need:</h2>
+        <br>
+      </div>
+
+      <div class="recipe_flipcards">
+        <div class="flipcard">
+          <div class="flipcard_inner">
+            <div class="flipcard_front">
+              <img src="images/berries.jpg" alt="Mixed Berries" style="width:300px;height:300px;">
+            </div>
+            <div class="flipcard_back">
+              <h2>Berries!</h2> 
+              <h3>(the stars of the show)</h3> 
+            </div>
+          </div>
+        </div>
+
+      <div class="flipcard">
+        <div class="flipcard_inner">
+          <div class="flipcard_front">
+            <img src="images/sugar.jpg" alt="Sugar" style="width:300px;height:300px;">
+          </div>
+          <div class="flipcard_back">
+            <h2>Sugar!</h2> 
+            <h3>(for sweetness)</h3> 
+          </div>
+        </div>
+      </div>
+
+      <div class="flipcard">
+        <div class="flipcard_inner">
+          <div class="flipcard_front">
+            <img src="images/lemon.jpg" alt="Lemon Juice" style="width:300px;height:300px;">
+          </div>
+          <div class="flipcard_back">
+            <h2>Lemon Juice!</h2> 
+            <h3>(for acidity and flavor)</h3> 
+          </div>
+        </div>
+      </div>
+
+      <div class="flipcard">
+        <div class="flipcard_inner">
+          <div class="flipcard_front">
+            <img src="images/pectin.jpg" alt="Pectin" style="width:300px;height:300px;">
+          </div>
+          <div class="flipcard_back">
+            <h2>Pectin!</h2> 
+            <h3>(to make it jammy)</h3> 
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="recipe">
+        <div class="recipe_wrapper">
+          <h2>Directions:</h2>
+        <div class="recipe_directions">
+          <ol>
+            <li><p>1.&nbsp;&nbsp;&nbsp;Toss in a Pot: 1 cup berries, 1/4 cup sugar, 1 tsp lemon juice, 2 tsp pectin (increase amounts accordingly if you want to make more jam)</p></li>
+            <li><p>2.&nbsp;&nbsp;&nbsp;Cook on medium heat, stirring constantly with a wooden spoon</p></li>
+            <li><p>3.&nbsp;&nbsp;&nbsp;Once the sugar melts, begin gently mashing the berries with either a potato masher or your trusty wooden spoon</p</li>
+            <li><p>4.&nbsp;&nbsp;&nbsp;Keep stirring till thickened (Usually 5-10 minutes, but cook times vary)</p></li>
+            <li><p>5.&nbsp;&nbsp;&nbsp;Let cool a bit before eating!</p></li>
+          </ol>
+        </div>
+          <br>
+        </div> 
+      </div>
+
+      <div class="recipe_form"> 
+        <h2>Jam Submissions!</h2>
+        <p>Have a neat jam of your own that you want to share? Please share it with us by filling out the contact form below with your name, email, and preferred jam recipe.</p>
+      </div>
+
+      <div class="container">
+        <form action="https://formspree.io/f/mbjpapka" method="POST">
+          <fieldset>
+            <label for="name_id">Your Name</label>
+            <input type="text" placeholder="Enter Your Name" id="name_id" name="name" required>
+        
+            <label for="email_id">Your Email</label>
+            <input type="email" placeholder="Enter Your Email" id="email_id" name="email" required>
+    
+            <label for="msg" id="label">Recipe</label>
+            <textarea placeholder="Enter Recipe Here" id="msg" name="mesg" required></textarea><br>
+        
+            <input type="submit" value="Submit">
+          </fieldset>
+         </form>
+      </div>
+    </main>
+
+    <footer>
+        <p>&#169;&nbsp;Angel Caranna&nbsp;&nbsp;|&nbsp;&nbsp;SI 539&nbsp;&nbsp;|&nbsp;&nbsp;Fall 2020</p>
+    </footer>
+  </body>
+</html>

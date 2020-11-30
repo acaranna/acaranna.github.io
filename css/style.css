@@ -1,0 +1,596 @@
+body{
+    background-color: #F3E4E2;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    color: #392D2F;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 36px;
+    line-height: 1;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    line-height: 1;
+    padding: 2px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    padding-bottom: 4px;
+}
+
+p{
+    line-height: 1.2;
+    padding: 8px 20px;
+}
+
+header{
+    background-color: #846267;
+    color: #ffffff;
+    border-bottom: 1px solid #392D2F;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: #392D2F;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.title img{
+    position: relative;
+    margin-top: 9px;
+    margin-right: 5px;
+}
+
+.nav_links{
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav_item{
+    display: block;
+    padding: 10px;
+}
+
+.nav_item a{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav_item.active a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+}
+
+.nav_item a:hover{
+    text-decoration: underline;
+}
+
+a.skip{
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+  
+a.skip:focus{
+    position: initial;
+}
+
+*:focus{
+    border: 2px dotted #392D2F;
+}
+
+.about h1{
+    margin-top: 10px;
+}
+
+.about h2, .recipe_directions h2, .recipe_form h2{
+    text-decoration: underline;
+}
+
+  /* ---------------------------- HOME ----------------------------- */
+
+.jam_parallax{
+    background-image: url(../images/jam_parallax.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 450px;
+}
+
+.home_box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px;
+}
+
+.box{ 
+    max-width: 400px;
+    padding: 0 0 20px 0;
+    margin: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.box:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.box header{
+    background-color: #693041;
+    width: auto;
+}
+
+.box a{ 
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.box a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.box > p{
+    width: auto;
+    margin: 20px;
+    padding: 20px;
+}
+
+  /* -------------------------- HISTORY ---------------------------- */
+
+.timeline_intro{
+    display: grid;
+    grid-template-columns: 1;
+    grid-gap: 1rem;
+    padding: 10px 30px;
+    margin: 10px;
+}
+
+.tline{
+    margin: 12px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.tline h3{
+    padding: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
+.tline p{
+    line-height: 1.2em;
+    text-align: left;
+}
+
+  /* Timeline code adapted (and made mobile first!) from https://codepen.io/tutsplus/full/QNeJgR/ */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timeline ol{
+    background: #F3E4E2;
+    padding: 50px 0;
+  }
+  
+.timeline ol li{
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    margin-left: 20px;
+    padding-top: 50px;
+    background: #392D2F;
+}
+   
+.timeline ol li::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.timeline ol li div{
+    position: relative;
+    bottom: 0;
+    width: calc(100vw - 91px);
+    padding: 15px;
+    background: #693041;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.timeline ol li div::before{
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div{
+    left: 45px;
+}
+
+.timeline ol li:nth-child(even) div{
+    left: 45px;
+}
+
+.timeline ol li:nth-child(odd) div::before{
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #693041 transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div::before{
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #693041 transparent transparent;
+}
+
+time{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+  /* ----------------------- GALLERY ----------------------- */
+
+.jam_gallery{
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px;
+  }
+
+.gallery_item{
+    background: #693041;
+    border: 1px #392D2F solid;
+    color: #ffffff;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.gallery_item:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+  
+.gallery_item a img{
+    width: 400px;
+    height: 400px;
+    border-bottom: 1px #392D2F solid;
+}
+
+.caption{
+    padding: 15px;
+}
+  
+  /* ------------------------- RECIPE -------------------------- */
+  /* flipcard code adapted from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
+.recipe_flipcards{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+	justify-content: center;
+    height: auto;
+}
+
+.flipcard{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin: 1em;
+    perspective: 1000px;
+}
+  
+.flipcard_inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipcard:hover .flipcard_inner{
+    transform: rotateY(180deg);
+}
+  
+.flipcard_front, .flipcard_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flipcard_front{
+    background-color: #693041;
+}
+  
+.flipcard_back{
+    background-color: #693041;
+    color: #ffffff;
+    line-height: 50px;
+    padding-top: 90px;
+    transform: rotateY(180deg);
+}
+
+.recipe_wrapper{
+    display: grid;
+    grid-template-columns: 1;
+    grid-gap: 1rem;
+    padding: 10px 30px;
+    margin: 10px;
+}
+
+.recipe_directions{
+    margin: 12px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.recipe_directions ol li{
+    text-align: left;
+    list-style-type: none;
+}
+
+.recipe_form p{
+    padding: 10px 30px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1;
+    grid-gap: 1rem;
+    padding: 20px;
+    margin: 50px;
+    margin-top: 25px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+  
+label{
+    display: inline-block;
+    margin-right:10px;
+    width:15%;
+    padding-bottom: 0 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #8462678a;
+    box-sizing: border-box;
+}
+  
+textarea{
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #8462678a;
+    color: #693041;
+    box-sizing: border-box;
+}
+  
+input[type=submit]{
+    background-color: #693041;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+  
+input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+input[type=text]:focus{
+    border: 3px solid #846267;
+}
+
+input[type=email]:focus{
+    border: 3px solid #846267;
+}
+
+textarea:focus{
+    border: 3px solid #846267;
+}
+
+  /* -------------------- DESKTOP MEDIA QUERY ----------------------- */
+
+@media only screen and (min-width: 950px){
+
+    header{
+        display: flex;
+        height: auto;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-flow: row wrap;
+    }
+  
+    .nav_item a{
+        padding: 7px;
+    }
+
+    .home_box{
+        padding: 30px;
+    }
+    
+    .box{ 
+        max-width: 400px; 
+        margin: 12px;
+        background: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .box a{
+        padding: 75px;
+    }
+
+    .timeline_intro{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, fr));
+        grid-template-rows: 1;
+        padding: 10px 30px;
+    }
+
+    .tline{
+        margin: 5px;
+    }
+
+    .timeline ol li{
+        margin: 0 auto;
+        margin-left: auto;
+    }
+
+    .timeline ol li div{
+        width: 400px;
+    }
+
+    .timeline ol li:nth-child(even) div{
+        left: -439px;
+    }
+
+    .timeline ol li:nth-child(even) div::before{
+        left: 400px;
+        right: -15px;
+        border-width: 8px 0 8px 16px;
+        border-color: transparent transparent transparent #693041;
+    }
+    
+    .jam_gallery{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .recipe_flipcards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        height: auto;
+        padding: 5px;
+        margin: 0% auto;
+    }
+
+    form{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    #label{
+        vertical-align: top;
+        padding-top: 1em;
+    }
+    
+    input{
+        width:80%;
+    }
+    
+    textarea{
+        width:80%;
+        height: 25vh;
+    }
+     
+    div + label{
+        line-height: 25vh;
+        vertical-align:middle;
+    }
+}
+
+  /* -------------------- TABLET MEDIA QUERY ----------------------- */
+
+@media only screen and (min-width: 600px){
+    .box{  
+        max-width: 400px;
+    }
+
+    .timeline_intro{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-rows: 1;
+    }
+
+    .tline{
+        margin: 5px 55px;
+    }
+
+    .recipe_flipcards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        height: auto;
+        padding: 5px;
+    }
+}
+  /*------------------- REDUCE MOTION -------------------------- */
+
+  @media screen and (prefers-reduced-motion: reduce){
+
+    .tline{
+        animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+    }
+    
+    .flipcard:hover .flipcard_inner{
+        transform: none;
+        -webkit-transform: none;
+    }
+  }
