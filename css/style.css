@@ -77,7 +77,6 @@ footer{
 .nav_item.active a {
     color: #ffffff;
     text-decoration: underline;
-    text-decoration-thickness: .5px;
 }
 
 .nav_item a:hover{
@@ -336,7 +335,9 @@ time{
     transform-style: preserve-3d;
 }
 
-.flipcard:hover .flipcard_inner{
+.flipcard:hover .flipcard_inner
+.flipcard:active .flipcard_inner, 
+.flipcard:focus .flipcard_inner{
     transform: rotateY(180deg);
 }
   
@@ -589,7 +590,9 @@ textarea:focus{
 
   @media screen and (prefers-reduced-motion: reduce){
     
-    .flipcard:hover .flipcard_inner{
+    .flipcard:hover .flipcard_inner
+    .flipcard:active .flipcard_inner, 
+    .flipcard:focus .flipcard_inner{
         transform: none;
         -webkit-transform: none;
     }
